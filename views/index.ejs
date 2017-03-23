@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="Msg">
+<head>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>测试网页</title>
+	<link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller="msgCtrl">
+	<header>新年留言</header>
+	<div class="block1">
+		<h1>2017年，新年快乐！</h1>
+	</div>
+	<div class="block2">
+		<textarea ng-model="newMsg"></textarea>
+	</div>
+	<button class="btn1" ng-click="subMsg()">提交</button>
+	<div class="block-list">
+		<ul>
+			<li ng-repeat="message in messages">	<p>{{message.content}}</p>	<span>{{message.time | date: "yyyy-mm-dd HH:mm:ss"}}</span>	<div class="right">
+				<span class="glyphicon glyphicon-hand-up" aria-hidden="true" ng-click="addStart(message._id)">{{message.act}}</span>
+				<span class="glyphicon glyphicon-hand-down" aria-hidden="true" ng-click="noStart(message._id)">{{message.no}}</span> <span ng-click="delete(message._id, message)">删除</span>
+			</div></li>
+			
+		</ul>
+	</div>
+	<nav aria-label="Page navigation">
+	  <ul class="pagination">
+	    <li ng-repeat="page in pages" ng-click="getMsg(page)"><a >{{page}}</a></li>
+	  </ul>
+	</nav>
+	<script type="text/javascript" src="framework/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/msg.js"></script>
+</body>
+</html>

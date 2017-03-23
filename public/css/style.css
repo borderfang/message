@@ -1,0 +1,14 @@
+html,body { padding: 0; margin: 0; font-size: 16px; }
+li { list-style: none; }
+header { text-align: center; background-color: rgba(255,0,0,.8); color: #fff; height: 40px; line-height: 40px; font-size: .8rem; }
+div.block1 { width: 100%; background-color: #e1e1e1; padding-top: 20px; padding-bottom: 20px; }
+.block1 h1 { text-align: center; color: red; font-size: .9rem; }
+.block2 { padding: 10px 10px 5px; display: box; box-sizing: border-box; }
+.block2>textarea { border: 1px solid #dbdbdb; width: 100%; min-height: 200px; padding: 10px;box-sizing: border-box; resize: none;  }
+button.btn1 { background-color: red; color: #fff; border: none;	padding: 8px 15px; margin: 25px auto; display: block; border-radius: 5px; 
+}
+.block-list ul { padding: 0; }
+.block-list li{ border: 1px solid #e1e1e1;margin: 10px; padding: 10px; overflow: hidden;}
+.block-list span { font-size: 13px; }
+.block-list div.right { float: right; }
+.block-list div.right span { margin: 10px; padding: 0px 3px; }
